@@ -43,45 +43,48 @@ void	ft_free(char **split,  int num)
 	free (split);
 }
 
-/*void ft_init(int *contadores)
+char **ft_loop(char const *s, char c, char **split, int num, int start)
 {
-	cc[0] = 0;
-	cc[1] = 0;
-	cc
-*/
-char **ft_split(char const *s, char c)
-{
-	char **split;
-	int start;
-	int num;
 	int i;
-
 	i = 0;
-	num = 0;
-	start = 0;
-	
-	split = ft_calloc((ft_counter(s, c) + 1), sizeof(char *));
-	if(!split)
-		return NULL;
 	while (s[i])
-	{	
+	{
 		if (i > 0 && s[i] != c  && s[i - 1] == c)
 			start = i;
 		if (s[i] != c && (s[i+ 1] == c || s[i + 1 ] == '\0'))
 		{
-			split[num] = ft_substr(s, start, i - start + 1);			
+			split[num] = ft_substr(s, start, i - start + 1);
 			if (split[num] == NULL)
 			{
 				ft_free(split, num);
-				return (NULL);
+				return (0);
 			}
 			num++;
 		}
 		i++;
 	}
-	return(split);
+	split[num] = NULL;
+	return (split);
 }
 
+
+char **ft_split(char const *s, char c)
+{
+	char **split;
+	int start;
+	int num;
+
+	num = 0;
+	start = 0;
+	
+	split = malloc(sizeof(char *) * (ft_counter(s, c) + 1));
+	if(!split)
+		return NULL;
+	split = ft_loop(s, c, split, num, start);
+	if(split == NULL)
+		return NULL;	
+	return(split);
+}
 /*
 
 int main() {

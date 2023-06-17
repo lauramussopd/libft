@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
+/*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 16:15:40 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/17 17:36:27 by laurmuss         ###   ########.fr       */
+/*   Created: 2023/06/17 15:21:35 by laurmuss          #+#    #+#             */
+/*   Updated: 2023/06/17 15:37:12 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *str, int c)
-{
-	char	*ptr;
+#include "libft.h"
+#include <unistd.h>
 
-	ptr = 0;
-	while (*str)
+void	ft_putendl_fd(char *s, int fd)
+{
+	int	i;
+
+	i = -1;
+	while (s[++i])
 	{
-		if (*str == c)
-		{
-			ptr = (char *) str;
-		}
-		str++;
+		write(fd, &s[i], 1);
 	}
-	if (*str == c)  // Check the last character separately
-    	{
-        	ptr = (char *)str;
-    	}
-	return (ptr);
+	write(fd, "\n", 1);
 }
+/*
+int main()
+{
+	char *s = "hello";
+	int fd = 1;
+
+	ft_putendl_fd(s, fd);
+	return (0);
+}
+*/

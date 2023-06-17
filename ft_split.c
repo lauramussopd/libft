@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 15:16:27 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/09 18:45:16 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/06/17 11:51:10 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,27 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int  ft_counter(const char *s, char c)
+int	ft_counter(const char *s, char c)
 {
-	int count;
-	int i;
+	int	count;
+	int	i;
 
 	count = 0;
 	i = 0;
-
-	while(s[i])
+	while (s[i])
 	{
-		if(s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 		{
 			count++;
 		}
 		i++;
 	}
-	return(count);
+	return (count);
 }
 
-void	ft_free(char **split,  int num)
+void	ft_free(char **split, int num)
 {
-	while(num > 0)
+	while (num > 0)
 	{
 		num--;
 		free(split[num]);
@@ -43,15 +42,18 @@ void	ft_free(char **split,  int num)
 	free (split);
 }
 
-char **ft_loop(char const *s, char c, char **split, int num, int start)
+char	**ft_loop(char const *s, char c, char **split, int num)
 {
-	int i;
+	int	i;
+	int	start;
+
 	i = 0;
+	start = 0;
 	while (s[i])
 	{
-		if (i > 0 && s[i] != c  && s[i - 1] == c)
+		if (i > 0 && s[i] != c && s[i - 1] == c)
 			start = i;
-		if (s[i] != c && (s[i+ 1] == c || s[i + 1 ] == '\0'))
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 		{
 			split[num] = ft_substr(s, start, i - start + 1);
 			if (split[num] == NULL)
@@ -67,31 +69,28 @@ char **ft_loop(char const *s, char c, char **split, int num, int start)
 	return (split);
 }
 
-
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **split;
-	int start;
-	int num;
+	char	**split;
+	int		start;
+	int		num;
 
 	num = 0;
 	start = 0;
-	
 	split = malloc(sizeof(char *) * (ft_counter(s, c) + 1));
-	if(!split)
-		return NULL;
-	split = ft_loop(s, c, split, num, start);
-	if(split == NULL)
-		return NULL;	
-	return(split);
+	if (!split)
+		return (NULL);
+	split = ft_loop(s, c, split, num);
+	if (split == NULL)
+		return (NULL);
+	return (split);
 }
 /*
-
 int main() {
 	char **split;
 	int i;
 	i = 0;
-	split = ft_split("hola que tal", ' ');
+	split = ft_split("    ", ' ');
 	while(split[i])
 	{
 		printf("La columan %d es: |%s|\n", i, split[i]);

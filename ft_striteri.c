@@ -6,10 +6,36 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 18:30:24 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/17 18:31:04 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/06/19 19:18:15 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	int i;
+
+	i = 0;
+    // "hola\0"
+	while(s[i]){
+		f(i, &s[i]);
+		i++;
+	}
+}
+/*
+void  to_uppercase(unsigned int i, char *c)
+{
+
+	*c =  *c - 32;
+}
+int main()
+{
+	char *s = ft_strdup("HOLA	hola");
+	ft_striteri(s, to_uppercase);
+	printf("s = %s\n", s);
+
+	return(0);
+}*/

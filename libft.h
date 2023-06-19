@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 18:59:39 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/17 18:28:12 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/06/19 19:30:14 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
 char	*ft_strchr(const char *str, int c);
+char	*ft_strrchr(const char *str, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dest, char const *src, size_t s);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);

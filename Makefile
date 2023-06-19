@@ -6,7 +6,7 @@
 #    By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 18:19:36 by laurmuss          #+#    #+#              #
-#    Updated: 2023/06/17 18:28:52 by laurmuss         ###   ########.fr        #
+#    Updated: 2023/06/19 19:16:50 by laurmuss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,12 +25,11 @@ OBJS	:=	${SRCS:.c=.o}
 CC		:=	gcc
 CFLAGS	:=	-Wall -Werror -Wextra
 AR		:=	ar rcs
-INCLUDE	:=	libft.h Makefile
 RM		:=	rm -f
 MODE	:=	normal
 
 #Metodo implicito
-%.o: %.c ${INCLUDE}
+%.o: %.c ${HEADER} Makefile
 	${CC} -c ${CFLAGS} $< -o $@
 
 #Mis metodos

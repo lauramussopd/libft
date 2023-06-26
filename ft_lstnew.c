@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/17 18:30:24 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/26 17:21:04 by laurmuss         ###   ########.fr       */
+/*   Created: 2023/06/26 18:05:35 by laurmuss          #+#    #+#             */
+/*   Updated: 2023/06/26 20:02:49 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <stdlib.h>
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+t_list *ft_lstnew(void	*content)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
-}
+	t_list *temp;
+	
+	temp = (t_list *)malloc(sizeof(t_list));
+	if (temp == NULL)
+		return NULL;
+	temp-> content = content;
+	temp-> next = NULL;
+	return (temp);
+}	
 /*
-void  to_uppercase(unsigned int i, char *c)
-{
-
-	*c =  *c - 32;
-}
 int main()
-{
-	char *s = ft_strdup("HOLA	hola");
-	ft_striteri(s, to_uppercase);
-	printf("s = %s\n", s);
+{	
+	char *content = "lau";
+	t_list *node;
+	node = ft_lstnew(content);
 
-	return(0);
-}*/
+	printf("My content is: %s", (char *)node->content);
+}
+*/

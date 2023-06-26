@@ -1,41 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/17 18:30:24 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/26 17:21:04 by laurmuss         ###   ########.fr       */
+/*   Created: 2023/06/26 20:13:09 by laurmuss          #+#    #+#             */
+/*   Updated: 2023/06/26 20:38:58 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void ft_lstadd_front(t_list **first, t_list *new)
 {
-	int	i;
+	new->next = *lst;
+	*lst = new;
 
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	*lst = &new;
 }
 /*
-void  to_uppercase(unsigned int i, char *c)
+inn main()
 {
+	t_list *first;
+	t_list a;
+	t_list b;
+	t_list c;
+	a.content = ft_strdup("Juan");
+	b.content = ft_strdup("Maria");
+	c.content = ft_Strdup("Pepito")
+	//t_list *d;
+	//d = malloc(sizeof(t_list) * 1)
+	
+	a.next = &b;
+	b.next = &c;
+	c.next = NULL;
+	first = &a; 
 
-	*c =  *c - 32;
+	t_list d;
+	ft_lstadd_front(&first, d);
+*/
+
 }
-int main()
-{
-	char *s = ft_strdup("HOLA	hola");
-	ft_striteri(s, to_uppercase);
-	printf("s = %s\n", s);
 
-	return(0);
-}*/
+}

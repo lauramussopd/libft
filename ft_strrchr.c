@@ -6,14 +6,14 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 16:15:40 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/19 19:32:22 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/06/26 17:27:17 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrchr(const char *str, int c)
 {
 	char	*ptr;
-	char let;
+	char	let;
 
 	let = c;
 	ptr = 0;
@@ -25,9 +25,9 @@ char	*ft_strrchr(const char *str, int c)
 		}
 		str++;
 	}
-	if (*str == let)      
+	if (*str == let)
 	{
-        	ptr = (char *)str;
-    	}
+		ptr = (char *)str;
+	}
 	return (ptr);
 }

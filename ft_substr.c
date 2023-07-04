@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 13:14:26 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/05 16:23:02 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 17:12:38 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (s[start + i] && i < len)
 	{
-	sub[i] = s[start + i];
-	i++;
+		sub[i] = s[start + i];
+		i++;
 	}
 	return (sub);
 }

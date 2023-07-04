@@ -6,13 +6,11 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:33:51 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/05/31 16:35:09 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:28:11 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t num)
 {

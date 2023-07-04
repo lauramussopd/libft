@@ -6,10 +6,10 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 16:28:51 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/17 18:04:45 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:32:32 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

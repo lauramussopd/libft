@@ -6,12 +6,11 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 17:37:04 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/07 17:36:31 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:33:43 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_charcmp(char c, const char *set)
 {

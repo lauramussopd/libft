@@ -6,9 +6,10 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 16:15:40 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/26 17:27:17 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:33:22 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {

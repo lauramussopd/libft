@@ -6,13 +6,11 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 15:16:27 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/17 11:51:10 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:29:55 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <unistd.h>
 
 int	ft_counter(const char *s, char c)
 {

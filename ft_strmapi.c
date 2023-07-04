@@ -6,13 +6,11 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 18:29:35 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/19 19:30:45 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:32:03 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,9 +6,10 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:46:58 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/05/03 19:21:50 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:26:01 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isdigit(int a)
 {

@@ -6,13 +6,11 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 18:30:24 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/26 17:21:04 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:31:16 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

@@ -6,12 +6,11 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 14:49:39 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/17 15:08:07 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:29:30 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {

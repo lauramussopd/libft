@@ -6,9 +6,10 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:58:55 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/05/04 17:27:27 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:26:25 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_isprint(int a)
 {

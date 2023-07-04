@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 19:41:41 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/17 17:12:38 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 17:10:41 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 	dir = (char *)malloc(sizeof(char) * (size + 1));
 	if (dir)
 	{
-			dir[size] = '\0';
+		dir[size] = '\0';
 		if (n == 0)
 			dir[0] = '0';
 		if (n < 0)

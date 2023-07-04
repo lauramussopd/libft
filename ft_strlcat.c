@@ -6,13 +6,10 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 19:39:56 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/06/01 17:40:03 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:31:37 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t destsize)
 {

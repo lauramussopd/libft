@@ -6,7 +6,7 @@
 #    By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 18:19:36 by laurmuss          #+#    #+#              #
-#    Updated: 2023/06/26 20:11:28 by laurmuss         ###   ########.fr        #
+#    Updated: 2023/07/04 17:35:14 by laurmuss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,11 @@ SRCS	:=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		   	ft_putendl_fd.c ft_putnbr_fd.c ft_strchr.c ft_strrchr.c \
 		   	ft_strncmp.c ft_strmapi.c ft_striteri.c
 
-OBJS	:=	${SRCS:.c=.o}
+SRCS_BONUS	:= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+			   ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+
+OBJS	:=	$(SRCS:.c=.o)
+OBJS_BONUS := $(SRCS_BONUS:.c=.o)
 CC		:=	gcc
 CFLAGS	:=	-Wall -Werror -Wextra
 AR		:=	ar rcs
@@ -29,22 +33,27 @@ RM		:=	rm -f
 MODE	:=	normal
 
 #Metodo implicito
-%.o: %.c ${HEADER} Makefile
-	${CC} -c ${CFLAGS} $< -o $@
+%.o: %.c $(HEADER) Makefile
+	$(CC) -c $(CFLAGS) $< -o $@
 
 #Mis metodos
-all: ${NAME}
+all: $(NAME)
 
-${NAME}: ${OBJS}
-	${AR} ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+
+bonus: .bonus
+
+.bonus: $(OBJS) $(OBJS_BONUS)
+	$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
+	@touch .bonus
 
 clean:
-	${RM} ${OBJS}
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
-fclean:
-	${RM} ${OBJS}
-	${RM} ${NAME}
-
+fclean: clean
+	$(RM) $(NAME)
+	$(RM) .bonus
 re:	fclean all
 
 .PHONY: all clean fclean re

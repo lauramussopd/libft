@@ -6,12 +6,11 @@
 /*   By: laurmuss <laurmuss@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 16:41:20 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/05/23 17:01:17 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/04 18:23:21 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 int	ft_atoi(const char *str)
 {
@@ -39,7 +38,6 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
 /*
 
 int main() {
